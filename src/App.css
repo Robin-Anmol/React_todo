@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #374151;
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding:  0.6rem 1rem;
+  font-size: 1.9rem;
+  border: none;
+  background:  rgba(31,41,55);
+  outline: none ;
+  color:  #6382c0;
+}
+form input{
+  border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+}
+form button{
+  border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+}
+
+.todo-input::placeholder {
+
+  font-size:1.3rem;
+  color:  #6382c0;
+
+}
+form button {
+  color:  #6382c0;
+ 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background:  #6382c0;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: rgba(17,24,39);
+  font-size: 1.4rem;
+  padding:0.2rem 0.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  border-radius:14px;
+  -webkit-border-radius:14px;
+  -moz-border-radius:14px;
+  -ms-border-radius:14px;
+  -o-border-radius:14px;
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  flex: 1;
+  
+
+}
+
+.trash-btn,
+.complete-btn {
+  background: none;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: none;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+  color: #8b5cf6;
+ 
+}
+
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background:  rgba(31,41,55);
+ font-size: 1rem;
+  background-image: none;
+  
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color:  #6382c0;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+
+
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background:    #6382c0;
+  cursor: pointer;
+  pointer-events: none;
+
+}
+/* Transition */
+/*
+.select:hover::after {
+  transform: scale(1.5);
+}
+*/
+ header h1{
+  color:aliceblue;
+
+ }
+@media screen and (max-width:768px) {
+  html{
+    font-size:11px;
+  }
+  form{
+    display:flex;
+    flex-direction: column;
+  }
+  .todo{
+    width:68vw;
+  }
+}
